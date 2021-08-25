@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="WpfScadaApp.MyTank"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfScadaApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="90" d:DesignWidth="190">
+    <Viewbox Stretch="Uniform">
+        <Canvas x:Name="HorizontalRight" Width="190" Height="90">
+            <!-- Step01 Tank -->
+            <Path x:Name="PathBody" Width="190" Height="88" Canvas.Left="0" Canvas.Top="1" Stretch="Fill"
+                  StrokeThickness="0.5" StrokeMiterLimit="2.75" Stroke="Black"
+                  Data="M168.828,96.8201 L174.874,95.271 L179.311,92.0437 L183.235,87.2027 L185.872,82.6198
+                        L188.123,77.327 L190.052,71.4532 L191.467,64.9986 L192.432,58.1566 L192.818,53.3156
+                        L192.946,50.8628 L192.946,48.4101 L192.689,41.0517 L191.853,34.0161 L190.567,27.4324
+                        L188.83,21.365 L186.708,15.8785 L184.135,11.102 L180.34,5.87376 L175.967,2.19459
+                        L170.05,0.0645466 L168.828,1.90735e-006 L24.1183,1.90735e-006 L18.0726,1.54912
+                        L13.6349,4.77646 L9.71163,9.61746 L7.0747,14.2003 L4.82366,19.4931 L2.89419,25.3669
+                        L1.47925,31.8215 L0.514523,38.6635 L0.12863,43.5045 L0,45.9573 L0,48.4101
+                        L0.257261,55.7684 L1.09336,62.804 L2.37967,69.3877 L4.11619,75.4551 L6.23859,80.9416
+                        L8.81121,85.7181 L12.6058,90.9464 L16.9793,94.6255 L22.8963,96.7556 L24.1183,96.8201
+                        L168.828,96.8201 Z">
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0, 0.5" SpreadMethod="Reflect">
+                        <GradientStop Color="#FF071923" Offset="0"/>
+                        <GradientStop Color="White" Offset="1" />
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+
+            <!-- Step 02 Left WdldingBrush -->
+            <Rectangle x:Name="PathBodyLeft" Width="4" Height="87.5" Canvas.Left="24" Canvas.Top="1"
+                       Stretch="Fill" StrokeThickness="0.5" Stroke="Black" StrokeMiterLimit="2.75">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,0.5" SpreadMethod="Reflect">
+                        <GradientStop Color="#FF071923" Offset="0" />
+                        <GradientStop Color="White" Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <!-- Step 03 Right WeldingBrush -->
+            <Rectangle x:Name="PathBodyRight" Width="4" Height="87.5" Canvas.Left="162" Canvas.Top="1"
+                       Stretch="Fill" StrokeThickness="0.5" Stroke="Black" StrokeMiterLimit="2.75">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,0.5" SpreadMethod="Reflect">
+                        <GradientStop Color="#FF071923" Offset="0" />
+                        <GradientStop Color="White" Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Canvas>
+    </Viewbox>
+</UserControl>

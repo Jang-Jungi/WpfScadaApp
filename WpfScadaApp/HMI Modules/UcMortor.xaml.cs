@@ -16,16 +16,13 @@ using System.Windows.Shapes;
 namespace WpfScadaApp
 {
     /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
+    /// UcMortor.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UcMortor : UserControl
     {
-        public MainWindow()
+        public UcMortor()
         {
             InitializeComponent();
-
-            App.LOGGER.Info("SCADA START");
-
         }
     }
 }

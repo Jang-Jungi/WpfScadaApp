@@ -16,16 +16,13 @@ using System.Windows.Shapes;
 namespace WpfScadaApp
 {
     /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
+    /// MyTank.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MyTank : UserControl
     {
-        public MainWindow()
+        public MyTank()
         {
             InitializeComponent();
-
-            App.LOGGER.Info("SCADA START");
-
         }
     }
 }
