@@ -20,16 +20,24 @@
                         <Pen Brush="Gray" Thickness="1"/>
                     </GeometryDrawing.Pen>
                     <GeometryDrawing.Brush>
-                        <SolidColorBrush Color="MediumBlue" />
+                        <SolidColorBrush Color="DarkBlue" />
                     </GeometryDrawing.Brush>
                 </GeometryDrawing>
             </DrawingBrush.Drawing>
         </DrawingBrush>
     </Window.Resources>
+    <!-- 화면 구현 -->
     <Canvas Background="{StaticResource BackgroundGrid}">
-       
-        <TextBlock x:Name="LblStatus" Canvas.Left="30" TextWrapping="Wrap" FontSize="16" Foreground="White"
+        <local:UcPipe Height="50" Canvas.Top="393" Width="130"/>
+        <local:UcPipe Height="50" Canvas.Top="431" Width="130" Canvas.Left="684"/>
+        <local:UcMortor Height="252" Canvas.Left="804" Canvas.Top="340" Width="280" RenderTransformOrigin="0.35,0.05"/>
+        <Label Content="SCADA Simulator" Canvas.Left="31" Canvas.Top="17" Height="58" Width="490" Foreground="Yellow" FontSize="50" FontFamily="Arial Black"/>
+        <local:UcTank Height="356" Canvas.Left="128" Canvas.Top="238" Width="565"/>
+        <local:UcLed x:Name="LedAlarm" Height="50" Canvas.Left="555" Canvas.Top="393" Width="50" />
+        <Button x:Name="BtnMonitoring" Content="Start Monitoring" Canvas.Left="34" Canvas.Top="114" Width="120" Height="40" Click="BtnMonitoring_Click"/>
+        <local:UcButton Height="52" Canvas.Left="955" Canvas.Top="429" Width="52" CustomClick="MySimpleButton_CustomClick"/>
+        <Label x:Name="LblStatus" Canvas.Left="30" FontSize="16" Foreground="White"
                    VerticalAlignment="Center"
-                   Text="Sample" Canvas.Top="80" Height="30" Width="1120"/>
+                   Content="Sample" Canvas.Top="80" Height="30" Width="1120"/>
     </Canvas>
 </Window>

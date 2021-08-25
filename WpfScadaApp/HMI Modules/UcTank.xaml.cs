@@ -18,9 +18,9 @@ namespace WpfScadaApp
     /// <summary>
     /// MyTank.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MyTank : UserControl
+    public partial class UcTank : UserControl
     {
-        public MyTank()
+        public UcTank()
         {
             InitializeComponent();
         }

@@ -78,6 +78,12 @@
     <Compile Include="HMI Modules\UcMortor.xaml.cs">
       <DependentUpon>UcMortor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HMI Modules\UcLed.xaml.cs">
+      <DependentUpon>UcLed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HMI Modules\UcButton.xaml.cs">
+      <DependentUpon>UcButton.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -99,6 +105,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HMI Modules\UcMortor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HMI Modules\UcLed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HMI Modules\UcButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
