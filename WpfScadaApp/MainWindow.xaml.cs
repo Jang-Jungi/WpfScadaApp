@@ -105,12 +105,22 @@ namespace WpfScadaApp
         {
             using (var conn = new SqlConnection(connectionString))  // close 자동
             {
-                string insertQuery = "TEST";
+                string insertQuery = $@"INSERT INTO Kassan01_Device
+                                               (dev_addr
+                                               ,currtime
+                                               ,code
+                                               ,value)
+                                         VALUES
+                                               ('{currData["dev_addr"]}'
+                                               ,'{currData["currtime"]}'
+                                               ,'{currData["code"]}'
+                                               ,'{currData["value"]}')";
                 try
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(insertQuery, conn);
-                    if(cmd.ExecuteNonQuery() == 1) // 전송 성공
+        
+                    if (cmd.ExecuteNonQuery() == 1) // 전송 성공
                     {
                         App.LOGGER.Info("IoT 데이터 입력 성공!");
                     }
